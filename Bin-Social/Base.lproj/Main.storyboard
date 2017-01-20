@@ -68,15 +68,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.87" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DUa-UU-eC2" customClass="RoundBtn" customModule="Bin_Social" customModuleProvider="target">
-                                <rect key="frame" x="113" y="200" width="150" height="150"/>
-                                <color key="backgroundColor" red="0.92310267857142858" green="0.9808872767857143" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="NBU-x4-nZl"/>
-                                    <constraint firstAttribute="width" constant="150" id="YmB-vT-EKe"/>
-                                </constraints>
-                                <state key="normal" image="google_logo"/>
-                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Vip-pP-hSb">
                                 <rect key="frame" x="46" y="380" width="283" height="127"/>
                                 <subviews>
@@ -102,6 +93,18 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DUa-UU-eC2" customClass="RoundBtn" customModule="Bin_Social" customModuleProvider="target">
+                                <rect key="frame" x="112" y="200" width="150" height="150"/>
+                                <color key="backgroundColor" red="0.23227500915527344" green="0.34837555885314941" blue="0.59656059741973877" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="NBU-x4-nZl"/>
+                                    <constraint firstAttribute="width" constant="150" id="YmB-vT-EKe"/>
+                                </constraints>
+                                <state key="normal" image="f"/>
+                                <connections>
+                                    <action selector="fbBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ou0-lq-CTQ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -129,6 +132,6 @@
     </scenes>
     <resources>
         <image name="B-in" width="197" height="80"/>
-        <image name="google_logo" width="1600" height="1600"/>
+        <image name="f" width="352" height="328"/>
     </resources>
 </document>
