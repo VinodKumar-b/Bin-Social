@@ -22,6 +22,11 @@ class SignInVC: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBOutlet weak var emailField: FancyField!
+    @IBOutlet weak var pwdField: FancyField!
+    
+    
 
     @IBAction func fbBtn(_ sender: Any) {
         
@@ -50,6 +55,28 @@ class SignInVC: UIViewController {
             }
         })
     }
+    
+    @IBAction func signin(_ sender: Any) {
+        
+        if let email = emailField.text, let pwd = pwdField.text {
+            FIRAuth.auth()?.signIn(withEmail: email, password: pwd, completion: { (user, error) in
+                if error == nil {
+                    print("Vinnu: Firebase authenticated with email")
+                } else {
+                    FIRAuth.auth()?.createUser(withEmail: email, password: pwd, completion: { (user, error) in
+                        if error != nil {
+                            print("Vinnu: Firebase is not created with email")
+                        } else {
+                            print("Vinnu: Firebase acc is created with email")
+                        }
+                    })
+                }
+            })
+        }
+        
+    }
+    
+    
 
 }
 
