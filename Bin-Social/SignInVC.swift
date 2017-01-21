@@ -22,6 +22,7 @@ class SignInVC: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         if let _ = KeychainWrapper.standard.string(forKey: KEY_UID) {
+            print("Vinnu: ID Found in keychain")
             performSegue(withIdentifier: "goToFeed", sender: nil)
         }
     }
@@ -93,9 +94,9 @@ class SignInVC: UIViewController {
         
         let keychainResult = KeychainWrapper.standard.set(id, forKey: KEY_UID)
         print("Vinnu: Data saved to keychain \(keychainResult)")
+        performSegue(withIdentifier: "goToFeed", sender: nil)
         
     }
-    
     
 
 }
