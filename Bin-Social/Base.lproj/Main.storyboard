@@ -130,11 +130,53 @@
                     <connections>
                         <outlet property="emailField" destination="8hs-oG-EuJ" id="Lw1-cv-fej"/>
                         <outlet property="pwdField" destination="IM2-cC-0IR" id="wwU-xo-cBN"/>
+                        <segue destination="Uep-17-os6" kind="show" identifier="goToFeed" id="kPs-UM-e22"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+        <!--FeedVC-->
+        <scene sceneID="Dpd-U3-jdK">
+            <objects>
+                <viewController id="Uep-17-os6" customClass="FeedVC" customModule="Bin_Social" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tM2-DX-uvX"/>
+                        <viewControllerLayoutGuide type="bottom" id="raW-k7-jm2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8QR-An-SSm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="krd-oA-xRq">
+                                <rect key="frame" x="279" y="28" width="80" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="FY4-Gw-RLR"/>
+                                    <constraint firstAttribute="width" constant="80" id="Oc9-UL-dqY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
+                                <state key="normal" title="Sign Out">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="signoutBtn:" destination="Uep-17-os6" eventType="touchUpInside" id="bmi-R4-B0d"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.57023973650000004" green="0.48609561008571428" blue="0.44736957284285717" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="krd-oA-xRq" firstAttribute="top" secondItem="tM2-DX-uvX" secondAttribute="bottom" constant="8" id="2n5-jx-mPM"/>
+                            <constraint firstItem="krd-oA-xRq" firstAttribute="trailing" secondItem="8QR-An-SSm" secondAttribute="trailingMargin" id="ToG-sY-kH7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="goToSignIn" id="4M7-2b-aZv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6O2-Qh-tZu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="909.60000000000002" y="138.98050974512745"/>
         </scene>
     </scenes>
     <resources>
